@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'lulo-clean-w01-one-bold';
+  src: font-url('lulo-clean-w01-one-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  padding-top: 80px;
+  color: #4C4C4B;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.9em;
+}
+
+// Universal Styles
+
+.background-opacity-medium {
+  background: rgba(0,0,0,0.5);
+}
+
+.horizontal-center {
+  text-align: center;
+}
+
+.jumbo-parallax {
+  background-image: image-url('nasdaq_stock_market_new_york-HD.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 90%;
+  min-height: 90vh;
+
+  .container {
+    width: 100%;
+  }
+}
+
+.jumbo-text {
+  width: 100%;
+  color: white;
+
+  h1 {
+    margin-top: 10px;
+  }
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
