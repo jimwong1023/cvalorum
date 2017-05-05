@@ -18,6 +18,18 @@ p {
   line-height: 1.9em;
 }
 
+table {
+  tr {
+    .center {
+      text-align: center;
+    }
+
+    .align_left {
+      text-align: left;
+    }
+  }
+}
+
 // Universal Styles
 
 .background-opacity-medium {
