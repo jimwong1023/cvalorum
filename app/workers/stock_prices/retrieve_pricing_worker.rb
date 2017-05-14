@@ -6,7 +6,7 @@ module StockPrices
 
     def perform
       Stock.find_each do |stock|
-        StockPrices::Service.retrieve_pricing(stock)
+        Service.retrieve_pricing(stock)
         sleep(1.minute)
       end
     end
