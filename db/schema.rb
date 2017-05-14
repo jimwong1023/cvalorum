@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505041446) do
+ActiveRecord::Schema.define(version: 20170514012549) do
 
   create_table "portfolios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",    null: false
@@ -39,12 +39,14 @@ ActiveRecord::Schema.define(version: 20170505041446) do
     t.string   "exchange",     null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["ticker"], name: "index_stocks_on_ticker", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
 end
