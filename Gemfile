@@ -10,7 +10,9 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'mysql2', '~> 0.4.4'
 gem "haml-rails", "~> 0.9"
-gem 'sidekiq', '~>4.2.10'
+gem 'sidekiq', '~> 5.0'
+gem 'sidekiq-cron', '~> 0.4.2'
+gem 'dalli'
 gem 'httparty'
 # Use Thin as the app server
 gem 'thin'

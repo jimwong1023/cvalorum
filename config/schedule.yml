@@ -1,0 +1,4 @@
+get_stock_prices:
+  cron: "0 17 * * *"
+  class: "StockPrices::RetrievePricingWorker"
+  queue: default
