@@ -50,13 +50,14 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   config.cache_store = :dalli_store,
-                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                    {:username => ENV["MEMCACHIER_USERNAME"],
-                     :password => ENV["MEMCACHIER_PASSWORD"],
-                     :failover => true,
-                     :socket_timeout => 1.5,
-                     :socket_failure_delay => 0.2
-                    }
+                       (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                       {
+                         :username => ENV["MEMCACHIER_USERNAME"],
+                         :password => ENV["MEMCACHIER_PASSWORD"],
+                         :failover => true,
+                         :socket_timeout => 1.5,
+                         :socket_failure_delay => 0.2,
+                       }
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque

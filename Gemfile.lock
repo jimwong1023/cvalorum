@@ -217,7 +217,7 @@ DEPENDENCIES
   dalli
   dotenv-rails
   haml-rails (~> 0.9)
-  httparty
+  httparty (~> 0.13.7)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

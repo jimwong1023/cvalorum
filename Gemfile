@@ -13,7 +13,7 @@ gem "haml-rails", "~> 0.9"
 gem 'sidekiq', '~> 5.0'
 gem 'sidekiq-cron', '~> 0.4.2'
 gem 'dalli'
-gem 'httparty'
+gem 'httparty', '~> 0.13.7'
 # Use Thin as the app server
 gem 'thin'
 # Use SCSS for stylesheets
