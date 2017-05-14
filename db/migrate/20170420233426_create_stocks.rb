@@ -4,6 +4,7 @@ class CreateStocks < ActiveRecord::Migration[5.0]
       t.string :ticker, null: false, unique: true
       t.string :company_name, null: false
       t.string :exchange, null: false
+      t.timestamps
     end
   end
 end
