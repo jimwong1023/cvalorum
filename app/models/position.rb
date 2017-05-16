@@ -1,4 +1,8 @@
 class Position < ActiveRecord::Base
   belongs_to :portfolio
-  has_one :stock
+  belongs_to :stock
+
+  def market_value
+    stock.latest_price * shares_held
+  end
 end

@@ -3,3 +3,27 @@
     .jumbo-text
       %h1
         Portfolio Performance
+.container
+  .row
+    %table
+      %tr
+        %th
+          Ticker
+        %th
+          Company Name
+        %th
+          Price
+        %th
+          Shares Held
+        %th
+          Market Value
+        %th
+          Gain/Loss
+      - portfolio.positions.each do |position|
+        %tr
+          %th= position.stock.ticker
+          %th= position.stock.company_name
+          %th= position.stock.latest_price
+          %th= position.shares_held
+          %th= position.market_value
+
