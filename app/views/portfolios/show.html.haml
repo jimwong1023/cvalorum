@@ -22,15 +22,14 @@
         \% Gain|Loss
       .col-xs-2.col-sm-2.col-md-2.col-lg-2
         Total Gain|Loss
-    - @positions.each do |position|
+    - @decorated_positions.each do |position|
       .row
         .col-xs-2.col-sm-2.col-md-1.col-lg-1= position.stock.ticker
         .hidden-xs.hidden-sm.col-md-2.col-lg-2.truncate= position.stock.company_name
-        .col-xs-2.col-sm-2.col-md-1.col-lg-1= position.stock.latest_price_in_cents
+        .col-xs-2.col-sm-2.col-md-1.col-lg-1= position.latest_stock_price
         .hidden-xs.hidden-sm.col-md-1.col-lg-1= position.shares_held
-        .col-xs-2.col-sm-2.col-md-2.col-lg-2= position.market_value_in_cents
-        .col-xs-2.col-sm-2.col-md-1.col-lg-1= position.cost_value_in_cents
-        .col-xs-2.col-sm-2.col-md-2.col-lg-2{class: [(position.positive_gain? ? 'green' : 'red')] }= position.percentage_gain_or_loss
-        .col-xs-2.col-sm-2.col-md-2.col-lg-2{class: [(position.positive_gain? ? 'green' : 'red')] }= position.total_gain_or_loss_in_cents
-
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2= position.market_value
+        .col-xs-2.col-sm-2.col-md-1.col-lg-1= position.cost_value
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2{class: [(position.positive_gain? ? 'green' : 'red')] }= position.percentage_gain_or_loss.to_s + " %"
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2{class: [(position.positive_gain? ? 'green' : 'red')] }= position.total_gain_or_loss
 
