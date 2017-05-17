@@ -2,6 +2,7 @@ class PortfoliosController < ApplicationController
   helper_method :portfolio
 
   def show
+     @positions = PositionDecorator.decorate_collection(portfolio.positions)
   end
 
   private

@@ -67,3 +67,17 @@ table {
   display: flex;
   align-items: center;
 }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.red {
+  color: #f44b42;
+}
+
+.green {
+  color: #41f486;
+}

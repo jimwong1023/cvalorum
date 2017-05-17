@@ -13,4 +13,8 @@ class Position < ActiveRecord::Base
   def total_gain_or_loss_in_cents
     market_value_in_cents - cost_value_in_cents
   end
+
+  def positive_gain?
+    total_gain_or_loss_in_cents > 0
+  end
 end
