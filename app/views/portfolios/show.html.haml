@@ -5,25 +5,32 @@
         Portfolio Performance
 .container
   .row
-    %table
-      %tr
-        %th
-          Ticker
-        %th
-          Company Name
-        %th
-          Price
-        %th
-          Shares Held
-        %th
-          Market Value
-        %th
-          Gain/Loss
-      - portfolio.positions.each do |position|
-        %tr
-          %th= position.stock.ticker
-          %th= position.stock.company_name
-          %th= position.stock.latest_price
-          %th= position.shares_held
-          %th= position.market_value
+    .row
+      .col-xs-1.col-sm-1.col-md-1.col-lg-1
+        Ticker
+      .col-xs-2.col-sm-2.col-md-2.col-lg-2
+        Company Name
+      .col-xs-1.col-sm-1.col-md-1.col-lg-1
+        Price
+      .col-xs-1.col-sm-1.col-md-1.col-lg-1
+        Quantity
+      .col-xs-2.col-sm-2.col-md-2.col-lg-2
+        Market Value
+      .col-xs-1.col-sm-1.col-md-1.col-lg-1
+        Cost Value
+      .col-xs-2.col-sm-2.col-md-2.col-lg-2
+        \% Gain/Loss
+      .col-xs-2.col-sm-2.col-md-2.col-lg-2
+        Total Gain/Loss
+    - portfolio.positions.each do |position|
+      .row
+        .col-xs-1.col-sm-1.col-md-1.col-lg-1= position.stock.ticker
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2= position.stock.company_name
+        .col-xs-1.col-sm-1.col-md-1.col-lg-1= position.stock.latest_price_in_cents
+        .col-xs-1.col-sm-1.col-md-1.col-lg-1= position.shares_held
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2= position.market_value_in_cents
+        .col-xs-1.col-sm-1.col-md-1.col-lg-1= position.cost_value_in_cents
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2= position.percentage_gain_or_loss
+        .col-xs-2.col-sm-2.col-md-2.col-lg-2= position.total_gain_or_loss_in_cents
+
 
