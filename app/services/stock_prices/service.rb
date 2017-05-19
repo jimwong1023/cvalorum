@@ -3,7 +3,7 @@ module StockPrices
     def self.retrieve_pricing(stock)
       hash_response = GoogleFinanceApiInteractor.new(stock).execute
       price_in_cents = hash_response[:l].delete!(".").to_i
-      StockPrice.create(stock: stock, price: price_in_cents)
+      StockPrice.create(stock: stock, price_in_cents: price_in_cents)
     end
   end
 end

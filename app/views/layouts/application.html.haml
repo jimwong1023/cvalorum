@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Cvalorem
+    %title Onyx Shore
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
@@ -11,7 +11,7 @@
       .container
         .navbar-header
           %a.navbar-brand.navigation-title{href: "/"}
-            CValorem
+            Onyx Shore
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right.navigation-links
             %li{role: 'presentation'}
@@ -25,20 +25,20 @@
                 Portfolio
     = yield
     %footer.footbar
-      .container-fluid
+      .container
         .row.vertical-center
-          .col-md-3.horizontal-center
-            %h4.navigation-title
-              CValorem
-          .col-md-3.horizontal-center
+          .col-sm-3.col-md-3.col-lg-3.horizontal-center
+            %h4.footbar-title
+              Onyx Shore
+          .col-sm-3.col-md-3.col-lg-3.horizontal-center
             .row
               %a{href: '#'}
                 About
-          .col-md-3.horizontal-center
+          .col-sm-3.col-md-3.horizontal-center
             .row
               %a{href: '#'}
                 Portfolio
-          .col-md-3.horizontal-center
+          .col-sm-3.col-md-3.horizontal-center
             .row
               %a{href: '#'}
                 Contact
